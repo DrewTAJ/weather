@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* CSS Document */
+body, .active, .activetab {
+	background-color:#143A4F;
+}
+
+.activetab, .active {
+	color:#7AD2FF;
+}
+
+#navbar ul li, footer {
+	background-color:#2B7BA7;
+	color: #143A4F;
+}
+
+/**********************************
+	  			Nav bar
+**********************************/
+#navbar {
+	/*border-radius:5px;*/
+	/*border:1px solid black;*/
+	overflow: auto;
+}
+
+#navbar ul {
+	overflow:auto;
+	display: inline;
+	padding-left:0;
+}
+
+#navbar ul li {
+	float:left;
+	clear:none;
+	width:33%;
+}
+
+#navbar ul li:first-child, #navbar ul li:nth-child(2) {
+	border-right:1px solid black;
+}
+
+#navbar ul li a {
+	display: block;
+	text-decoration: none;
+	color:#143A4F;
+}
+/**********************************
+	  			Body
+**********************************/
+body {
+/*	min-width:500px;
+	max-width:800px;
+	margin-left: auto;
+	margin-right: auto;*/
+/*	height:800px;*/
+	margin:0;
+}
+
+.active {
+	display: block;
+}
+
+section {
+	display:none;
+}
+
+section > h2 {
+	text-align: center;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+ul {
+	list-style:none;
+}
+
+li {
+	text-align: center;
+}
+
+li > div {
+	overflow:auto;
+}
+
+#loading {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#loading img {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#currently {
+	overflow: auto;
+	border-bottom: 1px solid red;
+	/*border:1px solid red;*/
+	border-radius:5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.forecast {
+	overflow:auto;
+	border:1px solid blue;
+	border-radius:5px;
+}
+
+.left {
+	float:left;
+	clear:none;
+	width:69.9%;
+	border-right:1px solid black;
+	overflow:auto;
+}
+
+.right {
+	float:right;
+	clear:none;
+	width:29.9%;
+}
+
+.right ul {
+	padding-left:0;
+}
+/**********************************
+	  			Footer
+**********************************/
+footer {
+	width: 100%;
+	text-align: center;
+}
+
+footer p {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+/**********************************
+	  			Icons
+**********************************/
+.skycon {
+	width:50%;
+}
+
+.cloudy, .clear-day, .clear-night, .fog, .hail , .partly-cloudy-day, .partly-cloudy-night, .rain, .snow, .sleet, .thunderstorm, .tornado, .wind {
+	height:50px;
+} 
+
+.cloudy {
+	background: url("../img/icons/50x50/cloudy.png") no-repeat;
+}
+.clear-day {
+	background: url("../img/icons/50x50/sunny.png") no-repeat;
+}
+.clear-night {
+	background: url("../img/icons/50x50/moon.png") no-repeat;
+}
+.fog {
+	background: url("../img/icons/50x50/fog.png") no-repeat;
+}
+.partly-cloudy-day{
+	background: url("../img/icons/50x50/partly-cloudy.png") no-repeat;
+}
+.hail {
+	background: url("../img/icons/50x50/freezing-rain.png") no-repeat;
+}
+.partly-cloudy-night {
+	background: url("../img/icons/50x50/p-c-night.png") no-repeat;
+}
+.rain {
+	background: url("../img/icons/50x50/rainy.png") no-repeat;
+}
+.snow {
+	background: url("../img/icons/50x50/snow.png") no-repeat;
+}
+.sleet {
+	background: url("../img/icons/50x50/sleet.png") no-repeat;
+}
+.thunderstorm {
+	background: url("../img/icons/50x50/thunder-storm.png") no-repeat;
+}
+.tornado {
+	background: url("../img/icons/50x50/smoke.png") no-repeat;
+}
+.wind {
+	background: url("../img/icons/50x50/wind.png") no-repeat;
+}
