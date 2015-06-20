@@ -8,13 +8,16 @@ var skycon_color;
 $(document).ready(init);
 
 function init() {
-  navitem = document.querySelectorAll("#navbar ul li a");
-  pages = document.querySelectorAll("section");
+  navitem = document.querySelectorAll("[data-role=pagelink]");
+  pages = document.querySelectorAll("[data-role=page]");
+  links = document.querySelectorAll("[data-role=pagelink]");      
+  $(pages[0]).show()
+
   for(var i = 0; i < pages.length; i++)
   {
     if(detectTouchSupport())
     {
-      navitem[i].addEventListener("tap",showWeather,false);
+      navitem[i].addEventListener("touchend",showWeather,false);
     }
     else
     {
@@ -102,7 +105,7 @@ function gotData(weatherData) {
       hourly += '</div>';
     hourly+='</li>';
 
-	  $(".weather-forecast > ul").append(hourly);
+	  $("#hourly .weather-forecast > ul").append(hourly);
     addSkycon("icon"+i,skycon_color, setSkycon(weatherData.hourly.data[i].icon));
 	}
 
@@ -113,7 +116,7 @@ function gotData(weatherData) {
       daily += '<div class="left">';
         daily += '<ul>';
           daily += '<li>'+month+' '+today.getDate()+'</li>';
-          daily += '<li class="'+daily+'"><canvas class="skycon" id="daily'+i+'"></canvas></li>';
+          daily += '<li><canvas class="skycon" id="daily'+i+'"></canvas></li>';
           daily += '<li>'+Math.round(weatherData.daily.data[i].temperatureMin)+'&degC '+weatherData.daily.data[i].summary+'</li>';
         daily += '</ul>';
       daily += '</div><div class="right">';
@@ -122,7 +125,7 @@ function gotData(weatherData) {
         daily += '<p>Windspeed: '+Math.round(weatherData.daily.data[i].windSpeed)+ " " +"kph"+'</p>';
     daily += '</div></li>';
 
-    $("#daily > ul").append(daily);
+    $("#daily > .weather-forecast .weather-list").append(daily);
     addSkycon("daily"+i,skycon_color, setSkycon(weatherData.daily.data[i].icon));
   }
 }

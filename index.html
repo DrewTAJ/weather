@@ -6,36 +6,34 @@
     <title>Weather Widget</title>
     <link type="text/css" rel="stylesheet" href="css/main.css"/>
 </head>
-
 <body>
 <div class="container">
 	<h1>Drew's Weather Forecast</h1>
-	<nav id="navbar">
-		<ul>
-			<li><a href="#currently" class="activetab">Current</a></li>
-			<li><a href="#hourly">Hourly</a></li>
-			<li><a href="#daily">Daily</a></li>
-		</ul>
-	</nav>
 	<div id="loading">
 		<h1>LOADING........</h1>
 		<img src="img/712.gif"/>
-	</div>
-	<section id="currently" class="active">
+	</div>	
+	<section id="currently">
 		<h2>Current Weather</h2>
 		<div class="weather-forecast"></div>
-	</section>
-	<section id="hourly">
+	</section>	
+	<nav id="navbar">
+		<ul>
+			<li><a href="#hourly" data-role="pagelink" class="activetab">Hourly</a></li>
+			<li><a href="#daily" data-role="pagelink">Daily</a></li>
+		</ul>
+	</nav>
+	<section id="hourly" data-role="page" class="active">
 		<h2>Hourly Weather</h2>
 		<div class="weather-forecast">
-			<ul>
+			<ul class="weather-list">
 			</ul>
 		</div>
 	</section>
-	<section id="daily">
+	<section id="daily" data-role="page">
 		<h2>Daily Weather</h2>
 		<div class="weather-forecast">
-			<ul>
+			<ul class="weather-list">
 			</ul>
 		</div>
 	</section>

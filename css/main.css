@@ -1,18 +1,31 @@
 @charset "UTF-8";
 /* CSS Document */
-body, .active, .activetab {
+body, .active, footer {
+	background-color:#F0F8FF;
+}
+
+.activetab {
 	background-color:#143A4F;
+}
+
+#navbar ul li {
+	background-color:#2B7BA7;
+	color: #143A4F;
 }
 
 .activetab, .active {
 	color:#7AD2FF;
 }
 
-#navbar ul li, footer {
-	background-color:#2B7BA7;
-	color: #143A4F;
+a[data-role=pagelink] {
+	display: block;
+	text-decoration: none;
+	color:#143A4F;
 }
 
+h1, h2, footer {
+	color: #7AD2FF;
+}
 /**********************************
 	  			Nav bar
 **********************************/
@@ -20,6 +33,8 @@ body, .active, .activetab {
 	/*border-radius:5px;*/
 	/*border:1px solid black;*/
 	overflow: auto;
+	border-top:1px solid red;
+	border-bottom: 1px solid red;
 }
 
 #navbar ul {
@@ -31,36 +46,32 @@ body, .active, .activetab {
 #navbar ul li {
 	float:left;
 	clear:none;
-	width:33%;
+	width:49.9%;
 }
 
-#navbar ul li:first-child, #navbar ul li:nth-child(2) {
-	border-right:1px solid black;
+#navbar ul li:first-child{
+	border-right:0.1rem solid black;
+	float:right;
 }
 
-#navbar ul li a {
-	display: block;
-	text-decoration: none;
-	color:#143A4F;
-}
 /**********************************
 	  			Body
 **********************************/
+#currently, #hourly, #daily {
+	margin-left:5%;
+	margin-right:5%;
+}
+
 body {
-/*	min-width:500px;
-	max-width:800px;
-	margin-left: auto;
-	margin-right: auto;*/
-/*	height:800px;*/
 	margin:0;
+}
+
+section[data-role=page] {
+	display:none;
 }
 
 .active {
 	display: block;
-}
-
-section {
-	display:none;
 }
 
 section > h2 {
@@ -102,11 +113,13 @@ li > div {
 
 #currently {
 	overflow: auto;
-	border-bottom: 1px solid red;
-	/*border:1px solid red;*/
+/*	border-bottom: 1px solid red;
+*/	/*border:1px solid red;*/
 	border-radius:5px;
-	margin-left: auto;
-	margin-right: auto;
+}
+
+#currently .weather-forecast {
+	overflow:auto;
 }
 
 .forecast {
@@ -115,21 +128,30 @@ li > div {
 	border-radius:5px;
 }
 
+.left, .right {
+	display:block;
+}
+
 .left {
 	float:left;
 	clear:none;
-	width:69.9%;
-	border-right:1px solid black;
+	width:69.8%;	
 	overflow:auto;
+	border-right:0.1rem solid black;
 }
 
 .right {
 	float:right;
 	clear:none;
 	width:29.9%;
+	
 }
 
 .right ul {
+	padding-left:0;
+}
+
+.weather-list {
 	padding-left:0;
 }
 /**********************************
@@ -194,4 +216,43 @@ footer p {
 }
 .wind {
 	background: url("../img/icons/50x50/wind.png") no-repeat;
+}
+
+@media all and (max-width:640px) and (min-width:401px) {
+	.left {
+		border-right:0;
+	}
+
+	.right {
+		border-left:0.1rem solid black;
+	}
+	#navbar ul li {
+		float:left;
+		clear:none;
+		width:49.85%;
+	}
+} 
+
+@media all and (max-width:400px) {
+	#hourly, #daily {
+		margin-left:0;
+		margin-right:0;
+	}
+	.left {
+		border-right:0;
+	}
+
+	.right {
+		border-left:0.1rem solid black;
+	}
+	#navbar ul li {
+		float:left;
+		clear:none;
+		width:49.85%;
+	}
+	.forecast {
+		border-left:0;
+		border-right:0;
+		border-radius:0;
+	}
 }
