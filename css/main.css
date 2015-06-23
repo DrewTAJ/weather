@@ -237,12 +237,19 @@ footer p {
 		margin-left:0;
 		margin-right:0;
 	}
+	.left, .right {
+		width:100%;
+	}
 	.left {
 		border-right:0;
 	}
-
+	.left ul {
+		padding-left:0;
+	}
 	.right {
-		border-left:0.1rem solid black;
+		border-top:0.1rem solid black;
+		float:left;
+		clear:left;
 	}
 	.forecast {
 		border-left:0;
